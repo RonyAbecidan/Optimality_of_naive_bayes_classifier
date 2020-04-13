@@ -13115,13 +13115,14 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span><span class="o">=</span> <span class="mi">150</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span><span class="o">=</span> <span class="mi">300</span>
 
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -13233,7 +13234,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">assign</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -13253,7 +13254,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">digit_to_binary</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -13274,7 +13275,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">digit_to_binary</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1024</span><span class="p">)])</span>
@@ -13289,7 +13290,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">BernoulliNB</span>
@@ -13370,7 +13371,7 @@ number of misclassifications using a Decision Tree 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">assign</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -13392,7 +13393,7 @@ number of misclassifications using a Decision Tree 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">launch_comparison</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
@@ -13414,7 +13415,7 @@ number of misclassifications using a Decision Tree 0
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>number of misclassifications using the Naive Bayes Classifier 62
 number of misclassifications using the LDA Classifier 71
-number of misclassifications using the 3-NN Classifier 26
+number of misclassifications using the 3-NN Classifier 19
 number of misclassifications using a Decision Tree 0
 </pre>
 </div>
@@ -13444,16 +13445,23 @@ We will take 3 well-known toy datasets : Iris, Wine, and Breast_Cancer. For all 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[548]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
 
-<span class="k">def</span> <span class="nf">launch_comparison_datasets</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">launch_comparison_datasets</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Comparison of the results on the testing set for different classifiers&#39;&#39;&#39;</span>
     
-    <span class="c1">#Gaussian Naive Bayes Classifier</span>
-    <span class="n">clf1</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">is_gaussian</span><span class="p">:</span>
+        <span class="c1">#Gaussian Naive Bayes Classifier</span>
+        <span class="n">clf1</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#Multinomial Naive Bayes Classifier</span>
+        <span class="n">clf1</span><span class="o">=</span><span class="n">MultinomialNB</span><span class="p">()</span>
+        
     <span class="n">clf1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
     <span class="n">y_pred1</span><span class="o">=</span><span class="n">clf1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy obtained using the Naive Bayes Classifier :&#39;</span><span class="p">,</span><span class="mi">100</span><span class="o">*</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred1</span><span class="p">,</span><span class="n">y_test</span><span class="p">),</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
@@ -13484,14 +13492,14 @@ We will take 3 well-known toy datasets : Iris, Wine, and Breast_Cancer. For all 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[555]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.datasets</span> <span class="k">as</span> <span class="nn">data</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span> <span class="k">as</span> <span class="n">tts</span>
 
 
-<span class="k">def</span> <span class="nf">efficiency_on_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">efficiency_on_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
     <span class="s1">&#39;cutting and training&#39;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
@@ -13502,7 +13510,7 @@ We will take 3 well-known toy datasets : Iris, Wine, and Breast_Cancer. For all 
         <span class="n">y</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span>
         
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">tts</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">launch_comparison_datasets</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+    <span class="n">launch_comparison_datasets</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">,</span><span class="n">is_gaussian</span><span class="p">)</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SMALL DATASETS : size_max = 569&#39;</span><span class="p">)</span>
@@ -13584,16 +13592,17 @@ Nevertheless it could be a good idea to test it on more realistic dataset. I pro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[570]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ZOO DATASET : https://www.kaggle.com/uciml/zoo-animal-classification#class.csv</span>
+<span class="c1">#Categorical or Binary data</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zoo dataset&#39;</span><span class="p">)</span>
 <span class="n">data_zoo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;zoo.csv&#39;</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="n">data_zoo</span><span class="p">[</span><span class="s1">&#39;class_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">X</span><span class="o">=</span><span class="n">data_zoo</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;class_type&#39;</span><span class="p">,</span><span class="s1">&#39;animal_name&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;size :&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-<span class="n">efficiency_on_dataset</span><span class="p">(</span><span class="n">data_zoo</span><span class="p">,[</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
+<span class="n">efficiency_on_dataset</span><span class="p">(</span><span class="n">data_zoo</span><span class="p">,[</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">],</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13612,7 +13621,7 @@ Nevertheless it could be a good idea to test it on more realistic dataset. I pro
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Zoo dataset
 size : 101
-Accuracy obtained using the Naive Bayes Classifier : 96.7741935483871 %
+Accuracy obtained using the Naive Bayes Classifier : 93.54838709677419 %
 Accuracy obtained using the LDA Classifier : 96.7741935483871 %
 Accuracy obtained using the 3-NN Classifier : 93.54838709677419 %
 Accuracy obtained using a Decision Tree : 96.7741935483871 %
@@ -13626,7 +13635,7 @@ Accuracy obtained using a Decision Tree : 96.7741935483871 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[557]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#GLASS DATASET : https://www.kaggle.com/uciml/glass - Classification of type of Glass</span>
@@ -13668,7 +13677,7 @@ Accuracy obtained using a Decision Tree : 64.61538461538461 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[558]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Pokemon dataset : https://www.kaggle.com/abcsds/pokemon/data</span>
@@ -13719,7 +13728,7 @@ Accuracy obtained using a Decision Tree : 95.83333333333334 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[559]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Banknote dataset : http://archive.ics.uci.edu/ml/datasets/banknote+authentication</span>
@@ -13761,14 +13770,11 @@ Accuracy obtained using a Decision Tree : 97.57281553398059 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[561]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#**Mushroom dataset** : https://www.kaggle.com/uciml/mushroom-classification/kernels</span>
 <span class="c1">#This time the attributes are categorical so we will use a multinomial law for each feature conditioned to the classes.</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
 
 <span class="n">data_mushroom</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;mushrooms.csv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -13780,7 +13786,7 @@ Accuracy obtained using a Decision Tree : 97.57281553398059 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[562]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">=</span><span class="n">data_mushroom</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
@@ -13800,7 +13806,7 @@ Accuracy obtained using a Decision Tree : 97.57281553398059 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[563]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">tts</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -13871,9 +13877,9 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
   \hline
   \text {Size} &amp;  101 &amp; 150 &amp; 178 &amp; 214 &amp; 569 &amp; 800 &amp; 1372 &amp; 8124 \\
   \hline
-  \text {Data Type} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
+  \text {Data Type} &amp; \text{Categorical} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
   \hline
-  \text {NBC} &amp; 96.8\% &amp; 100\% &amp; 94.4\% &amp; 46.2\% &amp; 92.4\% &amp; 92.9\% &amp; 83.3\% , &amp; 80.8\%\\
+  \text {NBC} &amp; 93.5\% &amp; 100\% &amp; 94.4\% &amp; 46.2\% &amp; 92.4\% &amp; 92.9\% &amp; 83.3\% , &amp; 80.8\%\\
   \hline
   \text {LDA} &amp;  96.8\% &amp; 97.8\% &amp; 98.1\% &amp; 63.1\% &amp; 97.1\% &amp; 92.5\% &amp; 97.1\% , &amp; 94.7\%\\
   \hline
@@ -13909,7 +13915,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[412]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
@@ -13922,7 +13928,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[566]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">detect_and_transform</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -13967,7 +13973,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[567]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wine dataset&#39;</span><span class="p">)</span>
@@ -14026,7 +14032,7 @@ Accuracy obtained using the Naive Bayes Classifier with the 6 most discriminant 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[581]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ZOO DATASET : https://www.kaggle.com/uciml/zoo-animal-classification#class.csv</span>
@@ -14034,7 +14040,7 @@ Accuracy obtained using the Naive Bayes Classifier with the 6 most discriminant 
 <span class="n">y</span><span class="o">=</span><span class="n">data_zoo</span><span class="p">[</span><span class="s1">&#39;class_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">X</span><span class="o">=</span><span class="n">data_zoo</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;class_type&#39;</span><span class="p">,</span><span class="s1">&#39;animal_name&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;size :&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-<span class="n">detect_and_transform</span><span class="p">(</span><span class="n">data_zoo</span><span class="p">,[</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">],</span><span class="mi">8</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">detect_and_transform</span><span class="p">(</span><span class="n">data_zoo</span><span class="p">,[</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">],</span><span class="mi">10</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 
 <span class="c1">#GLASS DATASET : https://www.kaggle.com/uciml/glass - Classification of type of Glass</span>
@@ -14089,9 +14095,9 @@ Accuracy obtained using the Naive Bayes Classifier with the 6 most discriminant 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Zoo dataset
 size : 101
-Feature percent :  50.0 %
-Accuracy obtained using the Naive Bayes Classifier with all the features: 96.7741935483871 %
-Accuracy obtained using the Naive Bayes Classifier with the 8 most discriminant features: 96.7741935483871 %
+Feature percent :  62.5 %
+Accuracy obtained using the Naive Bayes Classifier with all the features: 93.54838709677419 %
+Accuracy obtained using the Naive Bayes Classifier with the 10 most discriminant features: 93.54838709677419 %
 
 
 GLASS DATASET
@@ -14138,13 +14144,13 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
   \hline
   \text {Size} &amp;  101  &amp; 178 &amp; 214 &amp; 569 &amp; 800 &amp; 1372 &amp; 8124 \\
   \hline
-  \text {Data Type} &amp; \text{Continuous}  &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
+  \text {Data Type} &amp; \text{Categorical}  &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
   \hline
-  \text{k - features percent} &amp; 14 - 87.5\% &amp; 6 - 46.15\% &amp; 2 - 22.2\% &amp; 6 - 20\% &amp; 2- 28.6\% &amp; 2 - 50\%  &amp;  3 - 13.6\%  \\
+  \text{k - features percent} &amp; 10 - 62.5\% &amp; 6 - 46.15\% &amp; 2 - 22.2\% &amp; 6 - 20\% &amp; 2- 28.6\% &amp; 2 - 50\%  &amp;  3 - 13.6\%  \\
   \hline
-  \text {NBC using all the features} &amp; 96.8\% &amp; 94.4\% &amp; 46.2\% &amp; 92.4\% &amp; 92.9\% &amp; 83.3\% &amp; 80.8\% \\
+  \text {NBC using all the features} &amp; 93.5\% &amp; 94.4\% &amp; 46.2\% &amp; 92.4\% &amp; 92.9\% &amp; 83.3\% &amp; 80.8\% \\
   \hline
-  \text {NBC using only the k most discriminant features} &amp;  96.8\% &amp; 96.3\% &amp; 58.46\% &amp; 93.6\% &amp; 92.08\% &amp; 87.1\% &amp; 86.5\% \\
+  \text {NBC using only the k most discriminant features} &amp;  93.5\% &amp; 96.3\% &amp; 58.46\% &amp; 93.6\% &amp; 92.08\% &amp; 87.1\% &amp; 86.5\% \\
   \hline
   \end{array}$$<p></p>
 
@@ -14190,7 +14196,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[352]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">majority_vote</span><span class="p">(</span><span class="n">predictions</span><span class="p">):</span>
@@ -14214,7 +14220,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[583]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">random_nbc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -14259,7 +14265,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[584]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">clear_output</span>
@@ -14272,7 +14278,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[381]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">loo_cross_validation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">seed</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -14485,13 +14491,13 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[522]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_zoo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;zoo.csv&#39;</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="n">data_zoo</span><span class="p">[</span><span class="s1">&#39;class_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">X</span><span class="o">=</span><span class="n">data_zoo</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;class_type&#39;</span><span class="p">,</span><span class="s1">&#39;animal_name&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">loo_cross_validation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">loo_cross_validation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">is_gaussian</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14515,13 +14521,13 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[522]:</div>
+    <div class="prompt output_prompt">Out[74]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(0.9504950495049505, 0.9702970297029703)</pre>
+<pre>(0.8910891089108911, 0.8316831683168316)</pre>
 </div>
 
 </div>
@@ -14707,7 +14713,7 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Little Remark</strong> : For the two last datasets, using a leave-one-out-cross validation, we can see that finally, the generalization accuracy is much better than before with our cutting into a testing and a test set, so at the end it should be a great concurrent for others classifiers.</p>
+<p><strong>Little Remark</strong> : For the last dataset, using a leave-one-out-cross validation, we can see that finally, the generalization accuracy is much better than before with our cutting into a testing and a test set, so at the end it should be a great concurrent for others classifiers.</p>
 <p>Nevertheless, for these two specific datasets, the random NBC didn't succeed in obtaining better results than the traditional NBC.</p>
 
 </div>
@@ -14728,11 +14734,11 @@ $$\begin{array}{l|l|l|l|l|l|l|l|l}
   \hline
   \text {Size} &amp;  101  &amp; 178 &amp; 214 &amp; 569 &amp; 800 &amp; 1372 &amp; 8124 \\
   \hline
-  \text {Data Type} &amp; \text{Continuous}  &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
+  \text {Data Type} &amp; \text{Categorical}  &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Continuous} &amp; \text{Categorical} \\
   \hline
-  \text {NBC} &amp; 95.0\% &amp; 97.8\% &amp; 47.5\% &amp; 93.8\% &amp; 93.0\% &amp; 84.0\% &amp; 92.1\% \\
+  \text {NBC} &amp; 89.1\% &amp; 97.8\% &amp; 47.5\% &amp; 93.8\% &amp; 93.0\% &amp; 84.0\% &amp; 92.1\% \\
   \hline
-  \text {Random NBC} &amp;  97.0\% &amp; 98.3\% &amp; 50.5\% &amp; 93.3\% &amp; 93.4\% &amp; 72\% &amp; 84.8\% \\
+  \text {Random NBC} &amp;  83.2\% &amp; 98.3\% &amp; 50.5\% &amp; 93.3\% &amp; 93.4\% &amp; 72\% &amp; 84.8\% \\
   \hline
   \end{array}$$<p></p>
 
